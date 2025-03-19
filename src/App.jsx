@@ -1,4 +1,5 @@
 "use client"
+import React from "react"
 
 import { useState, useEffect, useRef, useCallback } from "react"
 import "./app.css"
@@ -136,17 +137,22 @@ const ChatInterface = () => {
   return (
     <div className="chat-container">
       <div className="chat-header">
-        <h1>CHATBOT FSG </h1>
+        
+        <h4>CHATBOT FSG</h4>
+        
+        
         
       </div>
 
       <div className="chat-messages">
         {messages.map((message) => (
           <div key={message.id} className={`message ${message.sender}`}>
-            <div className="avatar">{message.sender === "user" ? "U" : "B"}</div>
+            
+            <div className="avatar">{message.sender === "user" ? "U" : ""}</div>
             <div className="message-content">
               
               <div dangerouslySetInnerHTML={{ __html: message.text }} />
+              
               <div className="message-time">{formatTime(message.timestamp)}</div>
             </div>
           </div>
@@ -154,7 +160,7 @@ const ChatInterface = () => {
 
         {isLoading && (
           <div className="message bot">
-            <div className="avatar">B</div>
+            <div className="avatar">a</div>
             <div className="typing-indicator">
               <div className="typing-dot"></div>
               <div className="typing-dot"></div>
@@ -177,7 +183,7 @@ const ChatInterface = () => {
             disabled={isLoading}
           />
           <button type="submit" className="send-button" disabled={isLoading || !input.trim()}>
-            Envoyer
+            send
           </button>
         </form>
       </div>

@@ -1,0 +1,60 @@
+/* Add this to your app.css file */
+
+/* Chat toggle button */
+.chatbot-toggle-button {
+    position: fixed;
+    bottom: 20px;
+    right: 50px;
+    width: 56px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #03305c;
+    background-size: contain;
+    background-image: url("assets/a.png");
+    color: rgb(81, 12, 12);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    margin-top: 0px;
+  }
+  
+  .chat-toggle-button:hover {
+    background-color: #551adf;
+    transform: scale(1.05);
+  }
+  
+  /* Chat container visibility */
+  .chat-container {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 350px;
+    max-width: 90vw;
+    height: 500px;
+    max-height: 70vh;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .chat-open {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: all;
+  }
+  
+  .chat-closed {
+    opacity: 0;
+    transform: scale(0.95) translateY(20px);
+    pointer-events: none;
+  }
+  
+  
