@@ -2,7 +2,7 @@
 import React from "react"
 
 import { useState, useEffect, useRef, useCallback } from "react"
-import "./app.css"
+import "./App.css"
 
 // Moved outside component to prevent recreation on each render
 const generateId = () => Math.random().toString(36).substr(2, 9)
