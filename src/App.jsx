@@ -27,7 +27,8 @@ const ChatInterface = () => {
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef(null);
 
- const RASA_API_URL = "http://192.168.0.107/webhooks/rest/webhook";
+const RASA_API_URL = "http://192.168.0.107:5006/webhooks/rest/webhook";
+
 
 
   const scrollToBottom = useCallback(() => {
